@@ -1,0 +1,5 @@
+ Frontend Developer: Designs and codes the visual part of the website (HTML, CSS, JS).
+
+Backend Developer: Creates server logic, APIs, and connects the frontend with the database.
+
+Database Administrator (DBA): Manages and secures the database, handles queries, and optimizes performance.

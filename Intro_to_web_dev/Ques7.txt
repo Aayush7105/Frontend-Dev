@@ -1,0 +1,15 @@
+ Download and install VS Code from https://code.visualstudio.com.
+
+Install extensions:
+
+Live Server
+
+Prettier - Code Formatter
+
+HTML CSS Support
+
+JavaScript (ES6) snippets
+
+Create files: index.html, style.css, and script.js.
+
+Right-click index.html → “Open with Live Server”.

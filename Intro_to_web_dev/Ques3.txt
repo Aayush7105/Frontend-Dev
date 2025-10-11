@@ -1,0 +1,13 @@
+ User enters a website URL (e.g., https://www.google.com).
+
+Browser sends an HTTP request to the web server.
+
+Server processes the request and sends back an HTML file.
+
+Browser downloads linked CSS, JS, and images.
+
+Rendering engine parses HTML + CSS and builds the web page layout.
+
+JavaScript executes to add interactivity.
+
+Final web page is displayed on the screen.

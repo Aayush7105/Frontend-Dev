@@ -1,0 +1,13 @@
+1. Frontend Development:
+Deals with the part of the website users see and interact with.
+Technologies: HTML, CSS, JavaScript.
+Example: The layout, buttons, and navigation menu of Amazon's homepage.
+
+Backend Development:
+Handles data processing, server logic, and communication with the database.
+Technologies: Node.js, Python (Django/Flask), PHP, Java, SQL.
+Example: When you log in, the backend verifies your credentials and fetches your account details.
+
+Full-Stack Development:
+Involves both frontend and backend tasks.
+Example: A developer building both the user interface and server logic for a food delivery app.

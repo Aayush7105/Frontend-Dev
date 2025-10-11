@@ -1,0 +1,17 @@
+[Client/Browser]
+       |
+       |  HTTP Request
+       v
+[Web Server]
+       |
+       |  Data Request
+       v
+[Database]
+       |
+       |  Data Response
+       v
+[Web Server]
+       |
+       |  HTTP Response (HTML/CSS/JS)
+       v
+[Client/Browser]

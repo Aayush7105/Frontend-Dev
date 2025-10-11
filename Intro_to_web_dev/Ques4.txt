@@ -1,0 +1,9 @@
+ VS Code: Code editor to write and manage code.
+
+Browser (Chrome/Firefox): To view and test websites.
+
+Node.js & npm: To run JavaScript outside browser and manage packages.
+
+Git & GitHub: For version control and project backup.
+
+Live Server Extension: Instantly previews your webpage in the browser while coding.

@@ -1,0 +1,7 @@
+ Static Website:
+Shows the same content to every visitor.
+Example: A personal portfolio website made only with HTML & CSS.
+
+Dynamic Website:
+Changes content based on user actions or data.
+Example: Facebook news feed updates differently for every user.

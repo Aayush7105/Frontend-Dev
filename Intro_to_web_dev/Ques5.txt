@@ -1,0 +1,11 @@
+A web server stores, processes, and delivers web pages to clients upon request.
+It handles HTTP requests and responses.
+Examples:
+
+Apache HTTP Server
+
+Nginx
+
+Microsoft IIS
+
+Node.js (with Express)

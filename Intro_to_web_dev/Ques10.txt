@@ -1,0 +1,17 @@
+ [ Client (Browser) ]
+         |
+         |   HTTP Request
+         v
+[ Web Server ]
+         |
+         |   Query
+         v
+[ Database ]
+         |
+         |   Response Data
+         v
+[ Web Server ]
+         |
+         |   HTTP Response (HTML/CSS/JS)
+         v
+[ Client Displays Web Page ]
