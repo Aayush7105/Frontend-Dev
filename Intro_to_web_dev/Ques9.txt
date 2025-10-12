@@ -1,6 +1,0 @@
-Browser	      Rendering Engine
-Google Chrome    	Blink
-Mozilla Firefox	  Gecko
-Apple Safari	    WebKit
-Microsoft Edge  	Blink
-Opera    
