@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 800px;
+  margin: auto;
+  background-color: #171717;
+  border: 2px solid black;
+}
+.sticky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  background-color: #404040;
+  position: sticky;
+  color: aliceblue;
+}
+
+.box1 {
+  background-color: lightblue;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 150px;
+  top: 30px;
+}
+
+.box2 {
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  left: 707px;
+  position: fixed;
+  top: 120px;
+}
+
+.box3 {
+  background-color: lightcoral;
+  width: 100px;
+  height: 100px;
+  left: 150px;
+  position: absolute;
+  top: 230px;
+}
