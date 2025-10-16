@@ -1,0 +1,28 @@
+* {
+  background-color: aquamarine;
+}
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 700px;
+  border: solid 4px black;
+  gap: 15px;
+}
+
+.child1 {
+  width: 200px;
+  height: 200px;
+  border: solid 4px black;
+}
+.child2 {
+  width: 200px;
+  height: 200px;
+  border: solid 4px black;
+}
+.child3 {
+  width: 200px;
+  height: 200px;
+  border: solid 4px black;
+}
