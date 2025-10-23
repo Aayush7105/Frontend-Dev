@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 2rem;
+  background: #f6f7fb;
+}
+.team-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+.card h3 {
+  margin: 0 0 0.25rem 0;
+}
+.role {
+  font-weight: 700;
+  color: #334155;
+  margin: 0 0 0.5rem 0;
+}
+
+/* highlight Team Lead */
+.card.lead {
+  background: #f0f9ff;
+  border: 2px solid #7cc0ff;
+}
+
+/* box model is used: uniform padding/margin set above */
+
+/* responsive: single column under 600px */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

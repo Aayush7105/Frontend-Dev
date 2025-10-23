@@ -1,0 +1,24 @@
+body {
+  background: #fdf6ec;
+  font-family: Georgia, serif;
+  padding: 40px;
+}
+
+h1 {
+  column-span: all;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.main {
+  column-count: 3;
+  column-gap: 40px;
+  text-align: justify;
+}
+
+img {
+  float: left;
+  margin: 10px;
+  border-radius: 8px;
+}

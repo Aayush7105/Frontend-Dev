@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+header {
+  padding: 1rem;
+  background: #0f1724;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+header nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+main {
+  margin: 0;
+}
+.full {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+/* section backgrounds - full width */
+.intro {
+  background-image: url("https://via.placeholder.com/1400x600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+.history {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 223, 186, 0.95),
+    rgba(255, 245, 230, 0.95)
+  );
+  color: #1b1b1b;
+}
+.food {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 200, 120, 0.15),
+      transparent 30%
+    ),
+    url("https://via.placeholder.com/1400x800");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.visit {
+  background: #f3f4f6;
+}
+
+/* spacing, borders */
+.wrap h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+.wrap p {
+  margin: 0 0 1rem 0;
+  padding: 0.25rem 0;
+  border-left: 4px solid rgba(0, 0, 0, 0.04);
+}
+
+/* headings with different weights and sizes */
+.wrap h2 {
+  font-weight: 700;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #0b1220;
+  color: #cbd5e1;
+}
