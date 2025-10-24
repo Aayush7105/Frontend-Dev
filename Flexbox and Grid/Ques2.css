@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, Arial;
+  margin: 0;
+  padding: 24px;
+}
+.gallery h1 {
+  text-align: left;
+  margin: 0 0 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 130px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.price {
+  margin: 0;
+  font-weight: 700;
+}
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* tablet: 2 columns */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* mobile: 1 column */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
