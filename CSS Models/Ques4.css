@@ -1,0 +1,46 @@
+/* q4.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #f3f4f6;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  text-align: center;
+}
+.card:nth-child(1) {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+.card:nth-child(2) {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.card:nth-child(3) {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+.card h3 {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+}
+@media (max-width: 860px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

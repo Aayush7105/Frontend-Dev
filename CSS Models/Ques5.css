@@ -1,0 +1,56 @@
+/* Attribute selector: selects input of type text */
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+}
+/* Attribute starts-with selector: anchors that start with https */
+a[href^="https"] {
+  color: #0b66c3;
+  font-weight: 600;
+}
+/* Pseudo-classes */
+a:hover {
+  text-decoration: underline;
+}
+input:focus {
+  outline: 3px solid rgba(11, 102, 195, 0.18);
+}
+/* nth-child */
+.demo-list li:nth-child(odd) {
+  background: #eef;
+}
+.demo-list li:nth-child(3) {
+  font-weight: 700;
+}
+/* Combinators */
+/* direct child */
+main > h1 {
+  margin-top: 18px;
+}
+/* adjacent sibling */
+input + label {
+  margin-left: 8px;
+  color: #444;
+}
+/* general sibling */
+.links a ~ a {
+  opacity: 0.9;
+}
+/* descendant */
+.links li a {
+  display: inline-block;
+  padding: 6px;
+}
+
+/* Pseudo-elements */
+.demo-list li::before {
+  content: "• ";
+  color: #0b66c3;
+}
+.links li a::after {
+  content: " ↗";
+  font-size: 0.85rem;
+}
+
+/* Comments above describe what each selector does */

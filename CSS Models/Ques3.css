@@ -1,0 +1,59 @@
+/* q3.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui;
+  color: #fff;
+}
+.site-header,
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 14px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.site-header {
+  top: 0;
+}
+.site-footer {
+  bottom: 0;
+}
+main {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.linear {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(120deg, #6dd5ed 0%, #2193b0 100%);
+}
+.radial {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background: radial-gradient(
+    circle at 20% 20%,
+    #ffd194,
+    #f6a0a0 40%,
+    #7b6cff 100%
+  );
+  background-attachment: fixed;
+}
+h2 {
+  margin: 0 0 8px;
+}
+p {
+  max-width: 64ch;
+}

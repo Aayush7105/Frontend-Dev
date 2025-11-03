@@ -1,0 +1,53 @@
+/* q2.css */
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui;
+}
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  background: #eef2f6;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+.box.a {
+  width: 300px;
+  height: 150px;
+  background: #4b9;
+}
+.box.b {
+  width: 40%;
+  min-height: 120px;
+  background: #f39;
+  overflow: auto;
+}
+.box.c {
+  height: 30vh;
+  max-width: 360px;
+  background: #39f;
+}
+/* show difference with outlines for debugging/demo */
+.box {
+  outline: 2px dashed rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 700px) {
+  .wrap {
+    flex-direction: column;
+  }
+}

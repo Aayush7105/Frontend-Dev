@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Segoe UI, Arial;
+  background: #fff;
+  color: #111;
+  padding: 36px;
+}
+.article {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-family: system-ui, Arial;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  text-align: justify;
+}
+mark {
+  background: #fff59d;
+  padding: 0.1rem;
+  border-radius: 3px;
+}
+strong {
+  color: #0b66c3;
+}
+em {
+  color: #6b7280;
+}
+/* ::first-letter and ::first-line */
+.article p::first-letter {
+  font-size: 1.9rem;
+  float: left;
+  margin-right: 6px;
+  line-height: 1;
+}
+.article p::first-line {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

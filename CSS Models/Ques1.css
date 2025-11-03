@@ -1,0 +1,72 @@
+/* q1.css */
+:root {
+  --gap: 18px;
+  --bg: #f7f9fc;
+  --accent: #2b7df0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+}
+header,
+footer {
+  text-align: center;
+  padding: 16px;
+}
+.container {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px;
+}
+.box {
+  background: white;
+  padding: 16px;
+  border: 4px solid #ccc;
+  min-width: 170px;
+  text-align: center;
+  border-radius: 6px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.box .meta {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+.box:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+/* border variations */
+.solid {
+  border-style: solid;
+}
+.dashed {
+  border-style: dashed;
+}
+.double {
+  border-style: double;
+}
+.groove {
+  border-style: groove;
+}
+.rounded {
+  border-radius: 16px;
+}
+/* demonstrate padding differences */
+.dashed {
+  padding: 24px;
+}
+.double {
+  padding: 12px;
+}
+.groove {
+  padding: 32px;
+}
