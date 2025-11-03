@@ -1,0 +1,52 @@
+/* q3-image-showcase.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #000;
+}
+figure img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+figure:hover img {
+  transform: scale(1.1);
+}
+figure:hover::after {
+  opacity: 1;
+}
+figcaption {
+  background: #fff;
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

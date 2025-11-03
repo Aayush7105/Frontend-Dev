@@ -1,0 +1,60 @@
+/* q4-selectors.css */
+/* Element selector */
+p {
+  color: #111827;
+  font-size: 1rem;
+}
+
+/* Class selector */
+.highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ID selector */
+#unique {
+  background: #e0f2fe;
+  padding: 0.4rem;
+  border-radius: 6px;
+}
+
+/* Attribute selector */
+a[title] {
+  color: #ef4444;
+  text-decoration: none;
+}
+a[title]:hover {
+  text-decoration: underline;
+}
+
+/* Child combinator: select only direct <p> children of .combinators */
+.combinators > p {
+  color: #22c55e;
+}
+
+/* Descendant combinator: any <span> inside .combinators */
+.combinators span {
+  color: #f59e0b;
+}
+
+/* Adjacent sibling selector: paragraph immediately after h2 */
+h2 + p {
+  font-style: italic;
+}
+
+/* General sibling selector: all <p> following h2 */
+h2 ~ p {
+  margin-left: 1rem;
+}
+
+/* Layout adjustments */
+body {
+  text-align: center;
+  padding: 1.5rem;
+  font-family: system-ui, sans-serif;
+  background: #f9fafb;
+}
+footer {
+  margin-top: 1rem;
+  color: #6b7280;
+}

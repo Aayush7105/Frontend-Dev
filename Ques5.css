@@ -1,0 +1,61 @@
+/* q5-buttons.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #f1f5f9;
+}
+.btn-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.primary {
+  background: #2563eb;
+  color: #fff;
+}
+.primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+.primary:active {
+  transform: scale(0.96);
+}
+.secondary {
+  background: #0ea5e9;
+  color: #fff;
+}
+.secondary:hover {
+  background: #0284c7;
+}
+.outline {
+  background: transparent;
+  border: 1px solid #94a3b8;
+  color: #0f172a;
+}
+.outline:hover {
+  background: #f8fafc;
+}
+.btn:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

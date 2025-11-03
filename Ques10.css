@@ -1,0 +1,176 @@
+/* q10-mini-ui.css */
+/* Variables */
+:root {
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --accent: #0ea5e9;
+  --muted: #6b7280;
+  --radius: 14px;
+  --shadow: 0 10px 28px rgba(2, 6, 23, 0.08);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--bg), #eef6ff);
+  color: #081026;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.25rem;
+  background: transparent;
+}
+.brand {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.nav {
+  display: flex;
+  gap: 0.8rem;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+}
+.nav-link:hover {
+  background: rgba(14, 165, 164, 0.06);
+  color: #0f172a;
+}
+
+/* Main centers a card using Flexbox */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.card {
+  width: 100%;
+  max-width: 820px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  align-items: center;
+}
+
+/* Image section */
+.mini-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.mini-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(2, 6, 23, 0.06);
+}
+.mini-image figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* Form styles */
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.form input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #e6eef8;
+  font-size: 1rem;
+}
+.form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(14, 165, 164, 0.08);
+  border-color: var(--accent);
+}
+
+/* Buttons in form */
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.btn {
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(14, 165, 164, 0.12);
+}
+.btn.primary:hover {
+  transform: translateY(-3px);
+}
+.btn.outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: var(--muted);
+}
+.btn.outline:hover {
+  background: #f8fafc;
+}
+
+/* Focus states */
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* Footer */
+.foot {
+  text-align: center;
+  padding: 0.8rem;
+  color: var(--muted);
+}
+
+/* Responsive: stack vertically on small screens using Flexbox */
+@media (max-width: 720px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .mini-image {
+    align-self: center;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .nav {
+    display: none;
+  }
+}

@@ -1,0 +1,75 @@
+/* q6-animations.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+.anim-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Moving box */
+.box {
+  width: 60px;
+  height: 60px;
+  background: #2563eb;
+  border-radius: 10px;
+  animation: moveX 3s ease-in-out infinite alternate;
+}
+@keyframes moveX {
+  from {
+    transform: translateX(-80px);
+  }
+  to {
+    transform: translateX(80px);
+  }
+}
+
+/* Bouncing ball */
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+
+/* Color changing text */
+.color-text {
+  animation: colorChange 4s ease-in-out infinite;
+}
+@keyframes colorChange {
+  0% {
+    color: #2563eb;
+  }
+  33% {
+    color: #10b981;
+  }
+  66% {
+    color: #f59e0b;
+  }
+  100% {
+    color: #2563eb;
+  }
+}

@@ -1,0 +1,44 @@
+<!-- q8-box-sizing.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Q8 — Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="q8-box-sizing.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Box-Sizing Comparison</h1>
+    </header>
+
+    <main class="center">
+      <section class="comparison">
+        <article class="box default-box">
+          <h2>Default (content-box)</h2>
+          <div class="inner">content-box</div>
+          <p class="desc">
+            Width set to <code>200px</code> + <code>40px</code> padding adds to
+            total width.
+          </p>
+        </article>
+
+        <article class="box border-box">
+          <h2>box-sizing: border-box</h2>
+          <div class="inner">border-box</div>
+          <p class="desc">
+            Width set to <code>200px</code> includes padding & border in total
+            width.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small
+        >Observe how the visible total sizes differ even with same width and
+        padding.</small
+      >
+    </footer>
+  </body>
+</html>

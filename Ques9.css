@@ -1,0 +1,126 @@
+/* q9-combined-effects.css */
+:root {
+  --bg: #fbfcff;
+  --muted: #6b7280;
+  --accent: #ef4444;
+  --accent-2: #3b82f6;
+  --radius: 12px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(180deg, #fcfeff, #f0f7ff);
+  padding: 2rem;
+}
+
+/* Arrange examples using Flexbox */
+.examples {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+}
+
+/* Shared example style */
+.example {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    background-color 0.18s ease, color 0.18s ease;
+  font-weight: 600;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+}
+
+/* Button effect: grow + color change + shadow on hover and active */
+.btn-effect {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  color: #fff;
+  border: 0;
+}
+.btn-effect:hover {
+  transform: scale(1.06) translateY(-3px);
+  box-shadow: 0 18px 30px rgba(59, 130, 246, 0.18);
+}
+.btn-effect:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* Link effect shows underline & slight grow */
+.link-effect {
+  background: transparent;
+  border: 1px dashed rgba(59, 130, 246, 0.18);
+  color: var(--accent-2);
+}
+.link-effect:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
+}
+
+/* Tile effect demonstrates :focus outline and hover transform */
+.tile-effect {
+  min-height: 72px;
+  width: 160px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff, #f8fafc);
+  outline: 0;
+}
+.tile-effect:hover,
+.tile-effect:focus {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 22px 40px rgba(2, 6, 23, 0.12);
+}
+.tile-effect:focus {
+  box-shadow: 0 22px 40px rgba(2, 6, 23, 0.16),
+    0 0 0 6px rgba(59, 130, 246, 0.12);
+}
+
+/* Subtle effect: color + shadow on hover */
+.subtle-effect {
+  background: #fff;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+.subtle-effect:hover {
+  color: var(--accent);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.08);
+  transform: translateY(-4px) scale(1.02);
+}
+.subtle-effect:active {
+  transform: scale(0.99);
+}
+
+/* Make keyboard focus visible for elements with tabindex */
+.example:focus {
+  outline: none;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 520px) {
+  .examples {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .example {
+    width: 100%;
+    justify-content: center;
+  }
+}

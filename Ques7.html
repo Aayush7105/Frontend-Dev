@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Q7 — UI Components Demo</title>
+    <link rel="stylesheet" href="q7-ui-components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>UI Components Demo</h1>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Search & Controls</h2>
+
+        <!-- Search bar -->
+        <form class="search-row" role="search" aria-label="Search form">
+          <label for="site-search" class="sr-only">Search</label>
+          <input id="site-search" type="search" placeholder="Search..." />
+          <button type="submit" class="btn primary">Search</button>
+        </form>
+
+        <!-- Buttons -->
+        <div class="controls">
+          <button class="btn primary">Primary</button>
+          <button class="btn secondary">Secondary</button>
+          <button class="btn outline">Outline</button>
+          <button class="btn disabled" disabled>Disabled</button>
+        </div>
+
+        <!-- Dropdown (pure CSS styled select) -->
+        <label for="options" class="dropdown-label">Choose:</label>
+        <select id="options" class="custom-select">
+          <option value="one">Option One</option>
+          <option value="two">Option Two</option>
+          <option value="three">Option Three</option>
+        </select>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Q7 — UI Components • CSS only</small>
+    </footer>
+  </body>
+</html>

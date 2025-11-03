@@ -1,0 +1,50 @@
+<!-- q10-mini-ui.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Q10 — Mini UI Layout</title>
+    <link rel="stylesheet" href="q10-mini-ui.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1 class="brand">Mini UI</h1>
+      <nav class="nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Docs</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <figure class="mini-image">
+          <img src="https://via.placeholder.com/80" alt="small sample" />
+          <figcaption>Logo</figcaption>
+        </figure>
+
+        <form class="form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <div class="form-row">
+            <button type="submit" class="btn primary">Submit</button>
+            <button type="reset" class="btn outline">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <small>Q10 — Compact UI • Responsive • Accessible</small>
+    </footer>
+  </body>
+</html>
