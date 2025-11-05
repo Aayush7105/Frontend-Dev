@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap header - purple style</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      hremf="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .navbar-purple {
+        background: linear-gradient(
+          90deg,
+          #6f2bdc 0%,
+          #8a43ff 50%,
+          #6a2bd8 100%
+        );
+        box-shadow: 0 4px 18px rgba(15, 15, 40, 0.25);
+      }
+      .nav-search {
+        max-width: 540px;
+        width: 100%;
+      }
+      .search-input {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+      .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .nav-icon {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.05rem;
+      }
+      .version-badge {
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        border-radius: 6px;
+        padding: 0.25rem 0.5rem;
+        font-weight: 600;
+      }
+      .brand-badge {
+        width: 34px;
+        height: 34px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 700;
+      }
+      @media (max-width: 991px) {
+        .nav-search {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-purple">
+        <div class="container-fluid px-3">
+          <a class="navbar-brand d-flex align-items-center me-3" href="#">
+            <span class="brand-badge me-2">B</span>
+            <span class="d-none d-lg-inline">Docs</span>
+          </a>
+
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Examples</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Icons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Blog</a>
+              </li>
+            </ul>
+            <form
+              class="d-flex mx-lg-3 nav-search"
+              role="search"
+              onsubmit="return false;"
+            >
+              <div class="input-group">
+                <span
+                  class="input-group-text bg-transparent border-0 text-white"
+                  ><i class="bi bi-search"></i
+                ></span>
+                <input
+                  id="globalSearch"
+                  class="form-control search-input border-0"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <span
+                  class="input-group-text bg-transparent border-0 text-white small"
+                  >Ctrl K</span
+                >
+              </div>
+            </form>
+            <div class="d-flex align-items-center ms-2 gap-2">
+              <a class="btn btn-link nav-icon" href="#" title="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a class="btn btn-link nav-icon" href="#" title="X"
+                ><i class="bi bi-x-lg"></i
+              ></a>
+              <a class="btn btn-link nav-icon" href="#" title="Refresh"
+                ><i class="bi bi-arrow-repeat"></i
+              ></a>
+
+              <div class="version-badge d-none d-md-inline ms-1">v5.3</div>
+
+              <button
+                id="themeToggle"
+                class="btn btn-link nav-icon ms-2"
+                title="Toggle theme"
+              >
+                <i class="bi bi-moon"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
