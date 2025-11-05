@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, Arial;
+  margin: 0;
+  padding: 2rem;
+  background: #fff;
+}
+.cheats h1 {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+.box {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.25s, background 0.25s;
+}
+.box:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

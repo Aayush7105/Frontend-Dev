@@ -1,0 +1,76 @@
+:root {
+  --gap: 1rem;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  margin: 0;
+  padding: 1rem;
+  background: #f7f7f7;
+  color: #111;
+}
+header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  align-items: start;
+}
+figure {
+  margin: 0;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+figure img {
+  width: 100%;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.35s ease, transform 0.35s ease;
+  /* default filters for each nth-child */
+}
+figure:nth-child(1) img {
+  filter: blur(3px);
+}
+figure:nth-child(2) img {
+  filter: grayscale(100%);
+}
+figure:nth-child(3) img {
+  filter: sepia(80%);
+}
+figure:nth-child(4) img {
+  filter: brightness(60%);
+}
+figure:nth-child(5) img {
+  filter: contrast(60%);
+}
+figure:nth-child(6) img {
+  filter: hue-rotate(90deg);
+}
+
+figure:hover img {
+  filter: none;
+  transform: scale(1.02);
+}
+figcaption {
+  text-align: center;
+  padding: 0.5rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* Stack to one column below 600px */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  figure img {
+    height: 260px;
+  }
+}
