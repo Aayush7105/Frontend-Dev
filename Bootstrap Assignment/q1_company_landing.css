@@ -1,0 +1,15 @@
+/* q1_company_landing.css */
+
+/* Add subtle hover effect for navbar links */
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Optional: slightly larger hero image shadow */
+img.rounded.shadow-sm {
+  transition: transform 0.3s ease;
+}
+
+img.rounded.shadow-sm:hover {
+  transform: scale(1.03);
+}

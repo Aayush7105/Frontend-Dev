@@ -1,0 +1,4 @@
+/* q3 Product Catalog: cards with hover shadow and smooth transition */
+.product-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.card-img-top { object-fit: cover; height: 160px; }

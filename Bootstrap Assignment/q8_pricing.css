@@ -1,0 +1,4 @@
+/* q8 Pricing highlight the Pro plan */
+.plan-card { transition: transform .2s ease, box-shadow .2s ease; }
+.plan-card:hover { transform: translateY(-6px); }
+.highlight { background-color: var(--bs-primary); color: white; border: none; }

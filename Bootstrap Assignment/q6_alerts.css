@@ -1,0 +1,3 @@
+/* q6 minimal styling */
+body { font-family: system-ui, sans-serif; }
+.card { max-width: 800px; margin: 0 auto; }

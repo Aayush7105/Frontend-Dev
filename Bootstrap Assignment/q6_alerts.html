@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifications Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="q6_alerts.css">
+</head>
+<body>
+  <main class="container py-4">
+    <h1 class="h4 mb-3">Notifications</h1>
+
+    <div class="card p-3">
+      <!-- Success alert -->
+      <div class="alert alert-success" role="alert">
+        <strong>Success!</strong> Your profile was updated.
+      </div>
+
+      <!-- Info alert -->
+      <div class="alert alert-info" role="alert">
+        Tip: Use keyboard shortcuts to speed up workflows.
+      </div>
+
+      <!-- Dismissible danger alert -->
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Warning:</strong> Unusual sign-in detected.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- Summary well -->
+      <div class="bg-light border rounded p-3 mt-3">
+        <h6>Summary</h6>
+        <p class="mb-0 small">You have 2 unread messages and 1 pending security alert.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
