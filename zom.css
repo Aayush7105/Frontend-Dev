@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box1{
+    width:200px;
+    height:100px;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr); */
+    display: flex;
+    border: 8px solid red;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.box2{
+    width:200px;
+    height:100px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border: 2px solid white;
+    justify-items: center;
+    align-items: center;
+    margin: 50px;
+    background-color: greenyellow;
+    opacity: 0;
+    position:absolute;
+    bottom:50px;
+}
+
+.box1:hover + .box2{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    
+}

@@ -1,0 +1,29 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+}
+.box1{
+    background-color: silver;
+    height: 400px;
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+}
+.box2{
+    background-color: silver;
+    width: 20%;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    
+}
+.box3{
+    background-color:silver;
+    width: 20%;
+   height: 400px;
+   text-align: center;
+   padding: 20px;
+}

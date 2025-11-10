@@ -1,0 +1,32 @@
+*{
+    position: relative;
+}
+.container{
+    width: 500px;
+    height: 1000px;
+    background-color: black;
+    margin: auto;
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    border: 6px solid red;
+    box-sizing: border-box;
+    color: white
+
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    border: 6px solid rgb(76, 200, 76);
+    box-sizing: border-box;
+    color:white;
+    position: fixed;
+}
+.box3{
+    width: 200px;
+    height: 200px;
+    border: 6px solid blue;
+    box-sizing: border-box;
+    color: white
+}

@@ -1,0 +1,50 @@
+.outer{
+    position: relative;
+}
+
+
+.container{
+    height: 100vh;
+    display: grid ;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(2,200px);
+    gap: 20px;
+    place-content: center;
+   
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    box-shadow: 20px 20px 30px rgb(104, 160, 110);
+    border-radius: 5%;
+    transition: all 1s ease-in;
+}
+.container:hover .box1{
+    transform: translate(-50px,-50px);
+   
+}
+.container:hover .box2{
+    transform: translate(50px,-50px);
+}
+.container:hover .box3{
+    transform: translate(-50px,50px);
+}
+.container:hover .box4{
+    transform: translate(50px,50px);
+}
+ .content{
+    opacity: 0;
+ }
+.container:hover .content{
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    opacity: 0;
+    animation: showContent 0s 1s forwards;
+}
+@keyframes showContent{
+    to{
+    opacity:1;
+    }
+}

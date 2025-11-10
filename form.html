@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+    <table Border="1" cellpadding="9" style="margin:200px" >
+        <tr>
+            <td colspan="4" align="center">
+                Regristration Form
+            </td>
+            <!--second row-->
+            <tr>
+                <td>Student</td>
+                <td>
+                    <input type="text" placeholder="Name"/>
+                </td>
+                <td>
+                    <input type="text" placeholder="MiddleName"/>
+                </td>
+                <td>
+                    <input type="text" placeholder="LastName"/>
+                </td>
+            </tr>
+        </tr>
+        <!--third row-->
+        <tr>
+            <td>Father Name</td>
+            <td><input type="text" placeholder="Father name"/></td>
+            <td>Mother Name</td>
+            <td><input type="text" placeholder="Mother name"/></td>
+        </tr>
+        <!--4th row-->
+        <tr>
+            <td>Date of Birth</td>
+            <td>
+                <input type="date"/>
+            </td>
+            <td>Gender</td>
+            <td>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="Gender"/>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="Gender"/>
+            </td>
+        </tr>
+        <!--5th row-->
+        <tr>
+            <td>City</td>
+            <!-- <td><input type="text" placeholder="Enter City Name"/></td> -->
+             <td>
+                <select>
+                    <option>Select one option</option>
+                    <option>Delhi</option>
+                    <option>Amritsar</option>
+                    <option>Punjab</option>
+                    <option>Mumbai</option>
+                </select>
+             </td>
+             <td>Signature</td>
+             <td>
+                <input type="file"/>
+             </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <button><a href="https://www.google.com">Submit</a></button>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
