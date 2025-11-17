@@ -1,0 +1,5 @@
+It is a behaviour of js where it moves the decaration of variable, functions and classes to the top of there scope during the compilation phase and before code is executed.
+In this all the keyword with var keyword will be declared undefined.
+In hoisting there are two phases
+-memory phase 
+-execution phase
