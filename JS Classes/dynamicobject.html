@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Object Updater</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+    }
+    input {
+        display: block;
+        width: 250px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #output {
+        margin-top: 20px;
+        border: 2px solid black;
+        padding: 15px;
+        width: 350px;
+    }
+</style>
+</head>
+<body>
+
+<h2>🔧 Dynamic Object Updater</h2>
+
+<form id="userForm">
+    <label>Name:</label>
+    <input type="text" id="name">
+
+    <label>Email:</label>
+    <input type="text" id="email">
+
+    <label>Age:</label>
+    <input type="number" id="age">
+
+    <button type="submit">Update User</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+// Initial Object
+let user = {
+    name: "John",
+    email: "john@mail.com",
+    age: 21
+};
+
+// Pre-fill form with object values
+document.getElementById("name").value = user.name;
+document.getElementById("email").value = user.email;
+document.getElementById("age").value = user.age;
+
+// Display data function
+function displayUser() {
+    document.getElementById("output").innerHTML = `
+        <h3>📌 Updated User Details</h3>
+        <p><b>Name:</b> ${user.name}</p>
+        <p><b>Email:</b> ${user.email}</p>
+        <p><b>Age:</b> ${user.age}</p>
+    `;
+}
+
+// Initially display object
+displayUser();
+
+// Update on form submit
+document.getElementById("userForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Update the object
+    user.name = document.getElementById("name").value;
+    user.email = document.getElementById("email").value;
+    user.age = Number(document.getElementById("age").value);
+
+    // Refresh UI
+    displayUser();
+});
+</script>
+
+</body>
+</html>

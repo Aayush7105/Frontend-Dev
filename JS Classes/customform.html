@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Form Builder</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    input, select { display: block; margin-bottom: 10px; padding: 8px; width: 250px; }
+    label { font-weight: bold; margin-top: 10px; }
+    button { padding: 10px 15px; background: black; color: white; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h2>Dynamic Form Builder</h2>
+<div id="formContainer"></div>
+
+<script>
+// ---------------------- FORM BUILDER CLASS ----------------------
+class FormBuilder {
+    constructor(fields, containerId) {
+        this.fields = fields;
+        this.container = document.getElementById(containerId);
+    }
+
+    // Generate Form
+    renderForm() {
+        let formHTML = `<form id="dynamicForm">`;
+
+        this.fields.forEach(field => {
+            formHTML += `
+                <label>${field.label}</label>
+                <input type="${field.type}" name="${field.name}" placeholder="${field.placeholder || ''}">
+            `;
+        });
+
+        formHTML += `<button type="submit">Submit</button></form>`;
+        this.container.innerHTML = formHTML;
+
+        // Add event listener
+        document.getElementById("dynamicForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log(this.getFormData());
+            alert("Check console for form data!");
+        });
+    }
+
+    // Collect Form Data
+    getFormData() {
+        const form = document.getElementById("dynamicForm");
+        const data = {};
+
+        this.fields.forEach(field => {
+            data[field.name] = form[field.name].value;
+        });
+
+        return data;
+    }
+}
+
+// ---------------------- USAGE ----------------------
+const fields = [
+    { type: "text", label: "Username", name: "username", placeholder: "Enter username" },
+    { type: "email", label: "Email", name: "email", placeholder: "Enter email" },
+    { type: "password", label: "Password", name: "password", placeholder: "Enter password" },
+    { type: "number", label: "Age", name: "age", placeholder: "Enter age" }
+];
+
+// Create form object
+const formBuilder = new FormBuilder(fields, "formContainer");
+
+// Render form
+formBuilder.renderForm();
+</script>
+
+</body>
+</html>

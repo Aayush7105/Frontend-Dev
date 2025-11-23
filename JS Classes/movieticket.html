@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Ticket Booking</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+    }
+
+    input {
+        display: block;
+        width: 250px;
+        padding: 10px;
+        margin-bottom: 6px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .valid { border-color: green !important; }
+    .invalid { border-color: red !important; }
+
+    button {
+        padding: 10px 15px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #ticket {
+        margin-top: 20px;
+        padding: 15px;
+        border: 2px solid black;
+        width: 350px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<h2>🎬 Movie Ticket Booking</h2>
+
+<form id="bookingForm" novalidate>
+
+    <label>Name:</label>
+    <input type="text" id="name">
+    <span class="error" id="nameError"></span>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <span class="error" id="emailError"></span>
+
+    <label>Seats:</label>
+    <input type="number" id="seats">
+    <span class="error" id="seatError"></span>
+
+    <button type="submit">Book Ticket</button>
+
+</form>
+
+<!-- Ticket Output -->
+<div id="ticket"></div>
+
+<script>
+// RegEx Patterns
+const nameRegex = /^[A-Za-z ]+$/;
+const emailRegex = /^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/;
+const seatsRegex = /^[1-9]$|^10$/;
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let valid = true;
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const seats = document.getElementById("seats");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const seatError = document.getElementById("seatError");
+
+    // Name Validation
+    if(!nameRegex.test(name.value)){
+        name.classList.add("invalid");
+        name.classList.remove("valid");
+        nameError.textContent = "Name must contain only alphabets";
+        valid = false;
+    } else {
+        name.classList.add("valid");
+        name.classList.remove("invalid");
+        nameError.textContent = "";
+    }
+
+    // Email Validation
+    if(!emailRegex.test(email.value)){
+        email.classList.add("invalid");
+        email.classList.remove("valid");
+        emailError.textContent = "Enter a valid email";
+        valid = false;
+    } else {
+        email.classList.add("valid");
+        email.classList.remove("invalid");
+        emailError.textContent = "";
+    }
+
+    // Seats Validation (1-10)
+    if(!seatsRegex.test(seats.value)){
+        seats.classList.add("invalid");
+        seats.classList.remove("valid");
+        seatError.textContent = "Seats must be between 1 to 10";
+        valid = false;
+    } else {
+        seats.classList.add("valid");
+        seats.classList.remove("invalid");
+        seatError.textContent = "";
+    }
+
+
+    // If all valid → Store & Show Ticket
+    if(valid){
+        const booking = {
+            name: name.value,
+            email: email.value,
+            seats: seats.value
+        };
+
+        document.getElementById("ticket").innerHTML = `
+            <h3>🎟 Ticket Confirmed</h3>
+            <p><b>Name:</b> ${booking.name}</p>
+            <p><b>Email:</b> ${booking.email}</p>
+            <p><b>Seats:</b> ${booking.seats}</p>
+        `;
+        document.getElementById("ticket").style.display = "block";
+    }
+
+});
+</script>
+
+</body>
+</html>

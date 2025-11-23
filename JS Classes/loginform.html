@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Form Validation</title>
+
+<style>
+    body {
+        font-family: Arial;
+        padding: 20px;
+    }
+
+    input {
+        display: block;
+        width: 250px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .error {
+        color: red;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .valid { border-color: green !important; }
+    .invalid { border-color: red !important; }
+
+    button {
+        padding: 10px 15px;
+        background: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<h2>🔐 Login Form</h2>
+
+<form id="loginForm" novalidate>
+
+    <label>Username:</label>
+    <input type="text" id="username">
+    <span id="userError" class="error"></span>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <span id="passError" class="error"></span>
+
+    <button type="submit">Login</button>
+</form>
+
+<script>
+// REGEX checks
+const usernameRegex = /^.{5,}$/; 
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let valid = true;
+
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    const userError = document.getElementById("userError");
+    const passError = document.getElementById("passError");
+
+    // Username Validation (min 5 characters)
+    if(!usernameRegex.test(username.value)) {
+        username.classList.add("invalid");
+        username.classList.remove("valid");
+        userError.textContent = "Username must be at least 5 characters long";
+        valid = false;
+    } else {
+        username.classList.add("valid");
+        username.classList.remove("invalid");
+        userError.textContent = "";
+    }
+
+    // Password Validation
+    if(!passwordRegex.test(password.value)) {
+        password.classList.add("invalid");
+        password.classList.remove("valid");
+        passError.textContent = "Password must contain: 8+ chars, uppercase, lowercase, number, special char";
+        valid = false;
+    } else {
+        password.classList.add("valid");
+        password.classList.remove("invalid");
+        passError.textContent = "";
+    }
+
+    // If all valid
+    if(valid) {
+        alert("Login Successful!");
+    }
+});
+</script>
+
+</body>
+</html>

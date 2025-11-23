@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { margin: 5px; padding: 6px; }
+        #output { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+    <h2>Shopping Cart System (Classes + RegExp)</h2>
+
+    <!-- Add Item Form -->
+    <input type="text" id="itemName" placeholder="Item Name">
+    <input type="number" id="itemPrice" placeholder="Price">
+    <input type="number" id="itemQty" placeholder="Quantity">
+    <button onclick="addItem()">Add Item</button>
+    
+    <br><br>
+
+    <!-- Coupon -->
+    <input type="text" id="coupon" placeholder="Enter Coupon (e.g., SAVE20)">
+    <button onclick="applyCoupon()">Apply Coupon</button>
+
+    <div id="output"></div>
+
+    <script>
+        class Cart {
+            constructor() {
+                this.items = [];
+                this.discount = 0;
+            }
+
+            addItem(name, price, qty) {
+                this.items.push({ name, price, qty });
+            }
+
+            getTotal() {
+                let total = this.items.reduce((sum, item) => sum + item.price * item.qty, 0);
+                return total - (total * this.discount / 100);
+            }
+
+            applyCoupon(code) {
+                const regex = /^(SAVE|DISC)(\d{1,2})$/; 
+                const match = code.match(regex);
+
+                if (match) {
+                    this.discount = Number(match[2]);
+                    return `Coupon Applied: ${this.discount}% Off`;
+                } else {
+                    return "Invalid Coupon Format!";
+                }
+            }
+        }
+
+        const cart = new Cart();
+
+        function addItem() {
+            let name = itemName.value;
+            let price = Number(itemPrice.value);
+            let qty = Number(itemQty.value);
+
+            if (!name || !price || !qty) {
+                alert("Please enter all fields!");
+                return;
+            }
+
+            cart.addItem(name, price, qty);
+            displayTotal();
+        }
+
+        function applyCoupon() {
+            const msg = cart.applyCoupon(coupon.value.trim());
+            alert(msg);
+            displayTotal();
+        }
+
+        function displayTotal() {
+            let total = cart.getTotal();
+            document.getElementById("output").innerHTML =
+                `<b>Total Payable:</b> ₹${total.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
