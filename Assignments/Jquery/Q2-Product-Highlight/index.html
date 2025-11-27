@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q2 - Product Highlight</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q2: Product Highlight</h1>
+  </header>
+  <main>
+    <section aria-labelledby="product-heading">
+      <h2 id="product-heading">Featured Products</h2>
+      <p>Click on a product to highlight it. Hover for details. Click the heart to favorite.</p>
+      <div class="products">
+        <article class="product-card" data-instock="true" data-discount="true" data-id="p1">
+          <button class="favorite" aria-label="Favorite product">☆</button>
+          <h3 class="product-title">Product One</h3>
+          <p class="price">$19.99 <span class="discount">10% off</span></p>
+          <p class="short">A compact item for everyday use.</p>
+          <div class="details">More specs: 16GB, 2-year warranty, free shipping.</div>
+        </article>
+
+        <article class="product-card" data-instock="true" data-discount="false" data-id="p2">
+          <button class="favorite" aria-label="Favorite product">☆</button>
+          <h3 class="product-title">Product Two</h3>
+          <p class="price">$29.99</p>
+          <p class="short">A reliable choice for modern needs.</p>
+          <div class="details">More specs: 32GB, 1-year warranty.</div>
+        </article>
+
+        <article class="product-card" data-instock="false" data-discount="true" data-id="p3">
+          <button class="favorite" aria-label="Favorite product">☆</button>
+          <h3 class="product-title">Product Three</h3>
+          <p class="price">$49.99 <span class="discount">25% off</span></p>
+          <p class="short">Popular and powerful, temporarily out of stock.</p>
+          <div class="details">More specs: 64GB, limited edition.</div>
+        </article>
+
+        <article class="product-card" data-instock="true" data-discount="false" data-id="p4">
+          <button class="favorite" aria-label="Favorite product">☆</button>
+          <h3 class="product-title">Product Four</h3>
+          <p class="price">$9.99</p>
+          <p class="short">A budget-friendly essential.</p>
+          <div class="details">More specs: 8GB, compact size.</div>
+        </article>
+
+        <article class="product-card" data-instock="true" data-discount="true" data-id="p5">
+          <button class="favorite" aria-label="Favorite product">☆</button>
+          <h3 class="product-title">Product Five</h3>
+          <p class="price">$99.99 <span class="discount">15% off</span></p>
+          <p class="short">Premium build for professionals.</p>
+          <div class="details">More specs: 128GB, premium warranty.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Product Highlight Demo</p>
+  </footer>
+</body>
+</html>

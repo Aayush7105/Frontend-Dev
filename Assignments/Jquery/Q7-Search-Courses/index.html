@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q7 - Search Courses</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q7: Search Courses</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Available Courses</h2>
+      <div class="controls">
+        <input id="search" placeholder="Search courses..." />
+        <button id="clear-search">Clear</button>
+        <span id="match-count"></span>
+      </div>
+
+      <ul id="courses" class="courses">
+        <li class="course">JavaScript Basics</li>
+        <li class="course">Advanced JavaScript</li>
+        <li class="course">Web Accessibility</li>
+        <li class="course">React Fundamentals</li>
+        <li class="course">Node.js APIs</li>
+        <li class="course">Testing with Jest</li>
+        <li class="course">CSS Grid and Flexbox</li>
+        <li class="course">HTML5 Semantic Markup</li>
+        <li class="course">TypeScript Basics</li>
+        <li class="course">DevOps Essentials</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Course Search Demo</p>
+  </footer>
+</body>
+</html>

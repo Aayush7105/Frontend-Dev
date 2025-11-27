@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q9 - Multi-JQuery Widgets</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load jQuery versions and assign to variables to avoid conflicts -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>var jq1 = jQuery.noConflict(true);</script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>var jq3 = jQuery.noConflict(true); window.$ = jq3;</script>
+  <!-- Our app script uses both jq1 and jq3 variables -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q9: Multi-JQuery Widgets</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Carousel (Version 1)</h2>
+      <div id="carousel" class="carousel">
+        <div class="slide">Slide 1 — New Features</div>
+        <div class="slide">Slide 2 — Hot Deals</div>
+        <div class="slide">Slide 3 — Customer Stories</div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="start-carousel">Start</button>
+        <button id="stop-carousel">Stop</button>
+      </div>
+
+      <h2>Widget List (v1 highlights active)</h2>
+      <ul id="widgets">
+        <li class="widget">Widget A</li>
+        <li class="widget">Widget B</li>
+        <li class="widget">Widget C</li>
+      </ul>
+
+      <h2>Notifications & Tooltips (Version 2)</h2>
+      <button id="open-modal">Open Notification Modal</button>
+      <div id="modal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+          <button id="close-modal">Close</button>
+          <p>Important notification: Server will be updated tonight.</p>
+        </div>
+      </div>
+
+      <div class="tooltips">
+        <button class="tip" data-tip="Tooltip: Info 1">Hover me</button>
+        <button class="tip" data-tip="Tooltip: Info 2">Hover me</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Multi-JQuery Demo</p>
+  </footer>
+</body>
+</html>

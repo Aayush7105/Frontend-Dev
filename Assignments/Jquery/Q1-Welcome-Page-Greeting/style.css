@@ -1,0 +1,28 @@
+/* Simple styling for Q1 Welcome Page Greeting */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: #f7f9fb;
+  color: #222;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 16px 24px;
+}
+
+header h1 { margin: 0 0 8px 0; }
+header nav ul { display: flex; gap: 12px; list-style: none; padding: 0; margin: 0; }
+header nav a { color: #ecf0f1; text-decoration: none; }
+
+main { padding: 24px; }
+#welcome-section { background: #fff; border-radius: 6px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+.greeting { font-size: 1.6rem; margin-bottom: 4px; cursor: pointer; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+button { padding: 8px 12px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
+button:hover { background: #f0f3f6; }
+ul { margin-top: 16px; }
+footer { padding: 16px 24px; font-size: 0.9rem; color: #666; }

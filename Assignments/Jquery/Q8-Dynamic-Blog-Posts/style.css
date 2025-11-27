@@ -1,0 +1,12 @@
+/* Q8 - Dynamic Blog Posts styles */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #fafafa; color: #222; }
+header { background: #34495e; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.controls, .tag-controls, .search-highlight { display:flex; gap:8px; margin-bottom:12px; align-items:center; flex-wrap:wrap; }
+#post-body { width: 40%; min-height: 56px; }
+.posts { list-style: none; padding: 0; max-width: 800px; }
+.post { background: #fff; padding: 12px; margin-bottom: 8px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.post .title { margin: 0 0 6px 0; }
+.tag { background: #e0f7fa; color: #00695c; border-radius: 3px; padding: 2px 6px; margin-right: 6px; display:inline-block; font-size: 0.9rem; }
+.highlighted { background: #fff8e1; }
+footer { padding: 12px 20px; color: #666; }

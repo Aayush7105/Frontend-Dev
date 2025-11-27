@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q6 - Event Subscription Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q6: Event Subscription Panel</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Subscriptions</h2>
+      <p>Manage event subscriptions and notifications using the controls below.</p>
+      <div class="controls">
+        <button id="subscribe-all">Subscribe All</button>
+        <button id="unsubscribe-all">Unsubscribe All</button>
+        <input id="new-topic" placeholder="Add new topic" />
+        <button id="add-topic">Add Topic</button>
+      </div>
+
+      <ul id="topics" class="topics">
+        <li class="topic" data-topic="news">News <button class="sub-btn">Subscribe</button> <button class="remove-btn">Remove</button></li>
+        <li class="topic" data-topic="updates">Updates <button class="sub-btn">Subscribe</button> <button class="remove-btn">Remove</button></li>
+        <li class="topic" data-topic="offers">Offers <button class="sub-btn">Subscribe</button> <button class="remove-btn">Remove</button></li>
+        <li class="topic" data-topic="events">Events <button class="sub-btn">Subscribe</button> <button class="remove-btn">Remove</button></li>
+        <li class="topic" data-topic="blog">Blog <button class="sub-btn">Subscribe</button> <button class="remove-btn">Remove</button></li>
+      </ul>
+
+      <div id="message-area"></div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Subscription Panel</p>
+  </footer>
+</body>
+</html>

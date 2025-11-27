@@ -1,0 +1,11 @@
+/* Q7 - Search Courses styles */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #fff; color: #222; }
+header { background: #2c3e50; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.controls { display:flex; gap:8px; align-items:center; margin-bottom: 12px; }
+#search { padding:6px 8px; border-radius:4px; border: 1px solid #ccc; }
+.course { padding: 8px 10px; background: #fff; margin-bottom: 6px; border-radius:6px; border: 1px solid rgba(0,0,0,0.03); }
+.course.highlight { background: #fff9c4; }
+.course .matched { background: yellow; }
+#match-count { margin-left: 8px; color: #666; }
+footer { padding: 12px 20px; color: #666; }

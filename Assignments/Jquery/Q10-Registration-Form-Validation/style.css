@@ -1,0 +1,13 @@
+/* Q10 - Registration Form styles */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f7fbff; color: #222; }
+header { background: #2c3e50; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+form { max-width: 420px; background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.form-group { margin-bottom: 12px; display:flex; flex-direction:column; }
+label { font-weight: 600; margin-bottom: 6px; }
+input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid { border: 2px solid #e74c3c; }
+small.error { color: #e74c3c; display: none; margin-top: 4px; }
+button { padding: 8px 12px; border-radius: 4px; border: 1px solid #bbb; background: #fff; cursor: pointer; margin-right: 8px; }
+#status-area .message { background: #e7f9ee; border: 1px solid #a1e3b4; padding: 8px 10px; border-radius: 6px; margin-top: 12px; }
+footer { padding: 12px 20px; color: #666; }

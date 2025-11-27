@@ -1,0 +1,15 @@
+/* Q5 - Team Members Directory */
+body { font-family: Arial, sans-serif; margin: 0; background: #fcfdff; color: #222; }
+header { background: #2c3e50; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.controls { margin-bottom: 10px; }
+.department { background: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.dept-name { display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem; cursor: pointer; }
+.team-list { list-style: none; margin: 8px 0 0 0; padding: 0; }
+.manager { padding: 6px 0; border-bottom: 1px dashed #eee; }
+.reports { margin-top: 6px; padding-left: 12px; }
+.employee { padding: 4px 0; cursor: pointer; }
+.employee .contact { display: none; color: #666; margin-left: 8px; font-size: 0.9rem; }
+.highlight { background: rgba(41, 128, 185, 0.08); }
+.sibling-highlight { background: rgba(231, 76, 60, 0.08); }
+footer { padding: 12px 20px; color: #666; }

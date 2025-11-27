@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q5 - Team Members Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q5: Team Members Directory</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Company Teams</h2>
+      <p>Click a manager to highlight direct reports. Hover an employee to show contact details. Click a department to highlight everyone in it. Use Random to highlight siblings. Collapse/Expand teams using the arrow.</p>
+
+      <div class="controls">
+        <button id="random-employee">Highlight Random Employee's Siblings</button>
+        <button id="collapse-all">Collapse All</button>
+        <button id="expand-all">Expand All</button>
+      </div>
+
+      <div class="directory">
+        <div class="department" data-dept="engineering">
+          <h3 class="dept-name">Engineering <button class="toggle-team">▼</button></h3>
+          <ul class="team-list">
+            <li class="manager">Alice (Manager)
+              <div class="reports">
+                <div class="employee">Bob <span class="contact">(bob@example.com)</span></div>
+                <div class="employee">Charlie <span class="contact">(charlie@example.com)</span></div>
+                <div class="employee">Diana <span class="contact">(diana@example.com)</span></div>
+              </div>
+            </li>
+            <li class="manager">Ethan (Manager)
+              <div class="reports">
+                <div class="employee">Fiona <span class="contact">(fiona@example.com)</span></div>
+                <div class="employee">Gabe <span class="contact">(gabe@example.com)</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="department" data-dept="marketing">
+          <h3 class="dept-name">Marketing <button class="toggle-team">▼</button></h3>
+          <ul class="team-list">
+            <li class="manager">Hannah (Manager)
+              <div class="reports">
+                <div class="employee">Ian <span class="contact">(ian@example.com)</span></div>
+                <div class="employee">Jill <span class="contact">(jill@example.com)</span></div>
+              </div>
+            </li>
+            <li class="manager">Ken (Manager)
+              <div class="reports">
+                <div class="employee">Lara <span class="contact">(lara@example.com)</span></div>
+                <div class="employee">Mona <span class="contact">(mona@example.com)</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="department" data-dept="support">
+          <h3 class="dept-name">Support <button class="toggle-team">▼</button></h3>
+          <ul class="team-list">
+            <li class="manager">Noah (Manager)
+              <div class="reports">
+                <div class="employee">Olivia <span class="contact">(olivia@example.com)</span></div>
+                <div class="employee">Paul <span class="contact">(paul@example.com)</span></div>
+                <div class="employee">Quinn <span class="contact">(quinn@example.com)</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Team Directory Demo</p>
+  </footer>
+</body>
+</html>

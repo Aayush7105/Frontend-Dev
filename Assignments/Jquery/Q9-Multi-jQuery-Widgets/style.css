@@ -1,0 +1,16 @@
+/* Q9 - Multi-JQuery Widgets styles */
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #fff; color: #222; }
+header { background: #2c3e50; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.carousel { display:flex; gap:10px; overflow:hidden; max-width:600px; }
+.slide { min-width: 100%; padding: 20px; background: #f5f8fa; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display:none; }
+.slide.active { display:block; }
+.carousel-controls { margin: 8px 0 12px 0; display:flex; gap:8px; }
+#widgets { list-style:none; padding:0; display:flex; gap:8px; }
+.widget { padding:8px 10px; border:1px solid #eee; border-radius:4px; cursor:pointer; }
+.widget.active { background: #e8f5e9; border-color: #81c784; }
+.modal { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+.modal[aria-hidden="false"] { display:flex; }
+.modal-content { background:#fff; padding:16px; border-radius:6px; width:300px; }
+.tooltip { position:absolute; background:#222; color:#fff; padding:6px 8px; border-radius:4px; font-size:0.9rem; display:none; }
+footer { padding:12px 20px; color:#666; }

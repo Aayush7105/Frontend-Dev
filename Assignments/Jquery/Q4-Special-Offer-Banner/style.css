@@ -1,0 +1,12 @@
+/* Q4 - Special Offer Banner */
+body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #222; }
+header { background: #333; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.controls { display: flex; gap: 8px; margin-bottom: 12px; }
+button { padding: 8px 12px; border-radius: 4px; border: 1px solid #bbb; cursor: pointer; }
+.banners { display: grid; gap: 8px; }
+.banner { background: linear-gradient(90deg,#fffae6,#fff6f6); padding: 12px; border-radius: 6px; border-left: 6px solid #ffb300; cursor: pointer; }
+.banner.hidden { display: none; }
+.banner.out { display: none; }
+.banner.highlight { border-left-color: #27ae60; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+footer { padding: 12px 20px; color: #666; }

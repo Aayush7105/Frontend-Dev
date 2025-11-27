@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q1 - Welcome Page Greeting</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Include jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q1: Welcome Page Greeting</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="welcome-section" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading" class="greeting" tabindex="0">Welcome!</h2>
+      <p id="submessage">A short message appears based on the time of day.</p>
+
+      <!-- At least 5 interactive elements: buttons and a list -->
+      <div class="controls">
+        <button id="change-greeting">Change Greeting</button>
+        <button id="toggle-welcome">Toggle Welcome</button>
+        <button id="reset-greeting">Reset Greeting</button>
+        <button id="show-quote">Show Quote</button>
+      </div>
+
+      <ul>
+        <li>Personalized greeting on page load</li>
+        <li>Change to a motivational quote</li>
+        <li>Toggle visibility of welcome message</li>
+        <li>Show alert when greeting is clicked</li>
+        <li>Reset to original greeting</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Welcome Demo</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q3 - Interactive FAQ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 — Q3: Interactive FAQ</h1>
+  </header>
+  <main>
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3 class="question" tabindex="0">What is your return policy?</h3>
+          <div class="answer">Our return policy is 30 days with receipt. <input type="text" class="comment" placeholder="Add a comment"></div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="question" tabindex="0">How long does shipping take?</h3>
+          <div class="answer">Shipping typically takes 3-5 business days.</div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="question" tabindex="0">Do you ship internationally?</h3>
+          <div class="answer">Yes, we ship to most countries with additional fees.</div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="question" tabindex="0">Can I track my order?</h3>
+          <div class="answer">Yes — you'll receive a tracking link once your order ships. <input type="text" class="comment" placeholder="Email for tracking updates"></div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="question" tabindex="0">How do I contact support?</h3>
+          <div class="answer">Contact us at support@example.com or call 1-800-000-0000.</div>
+        </article>
+      </div>
+      <p class="hint">Try: Click question to toggle answer; hover to change color; double-click to collapse all.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Interactive FAQ Demo</p>
+  </footer>
+</body>
+</html>

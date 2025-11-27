@@ -1,0 +1,14 @@
+/* Style for Q2 Product Highlight */
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #222; }
+header { background: #34495e; color: #fff; padding: 12px 20px; }
+main { padding: 20px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.product-card { background: #fff; border-radius: 8px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; cursor: pointer; }
+.product-card .favorite { position: absolute; top: 8px; right: 8px; background: transparent; border: none; font-size: 1.2rem; cursor: pointer; }
+.product-card .favorite.selected { color: #e74c3c; }
+.product-card .details { display: none; font-size: 0.9rem; color: #555; margin-top: 8px; }
+.product-card.highlight { background: #f0f9ff; border: 1px solid #7cc2ff; }
+.product-card[data-discount="true"] { box-shadow: 0 3px 10px rgba(46, 204, 113, 0.06); }
+.product-card .discount { color: #27ae60; font-weight: 600; }
+.product-card.out-of-stock { opacity: 0.6; }
+footer { padding: 12px 20px; color: #777; }
