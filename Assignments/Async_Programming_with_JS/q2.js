@@ -26,7 +26,7 @@ Promise.resolve().then(() => {
 console.log("Synchronous: immediate log");
 
 // Final log:
-console.log("End");
+console.log("End program");
 
 /*
 Explanation (in comments):
